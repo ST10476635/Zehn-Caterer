@@ -18,8 +18,8 @@ jobs:
 
     - name: create wrapper
       run: chmod +x ./gradlew
-      working-directory: Zehn-Caterer
+      working-directory: zehn_caterers
    
     - name: Build with Gradle
       run: ./gradlew build
-      working-directory: Zehn-Caterer
+      working-directory: zehn_caterers
