@@ -14,7 +14,7 @@ body {
 
 header {
     background: linear-gradient(135deg, #2d1b69 0%, #6a3093 100%);
-    padding: 0.5rem 1rem; /* Reduced vertical padding */
+    padding: 0.5rem 1rem;
     text-align: center;
     overflow: hidden;
 }
@@ -25,13 +25,39 @@ header img {
     margin-bottom: 1rem;
 }
 
-/* Navigation Styles */
+/* Navigation Styles with Background Image */
+#toplinks {
+    background-image: url('_images/_gallery1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    position: relative;
+}
+
+/* overlay for better text readability */
+#toplinks::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(45, 27, 105, 0.7);
+    border-radius: 10px;
+    z-index: 1;
+}
+
 #toplinks ul {
     list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 #toplinks a {
@@ -41,17 +67,21 @@ header img {
     padding: 0.5rem 1rem;
     border-radius: 25px;
     transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #toplinks a:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 #toplinks li:not(:has(a)) {
     color: #ffd700;
     font-weight: bold;
     padding: 0.5rem 1rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* Main Content Styles */
