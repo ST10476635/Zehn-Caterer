@@ -1,11 +1,11 @@
-#1. PROJECT TITLE
+# 1. PROJECT TITLE
 Zehn Caterers
 
-#2. STUDENT INFORMATION
+# 2. STUDENT INFORMATION
 Student Name: Kemotheo Tlhale
 Student Number: ST10476635
 
-#3. PROJECT OVERVIEW:
+# 3. PROJECT OVERVIEW:
 
 Name: Zhen Caterers
 
@@ -29,7 +29,7 @@ Target Audience:
 •	Individuals planning private functions (weddings, birthdays).
 
 
-#4. WEBSITE GOALS AND OBJECTIVES:
+# 4. WEBSITE GOALS AND OBJECTIVES:
 
 1.(Goal) Provide a way for client communication:(Objective) Create a dedicated Contact Us page with a conspicuous contact form, clickable phone and email links, and Google Maps included.
 
@@ -41,7 +41,7 @@ Target Audience:
 
 5.(Goals) Manage orders and local leads:(Objectives) Create a backend system to collect and handle all website questions.
 
-#5. KEY FEATURES AND FUNCTIONALITY:
+# 5. KEY FEATURES AND FUNCTIONALITY:
 
 Features (Appear on every page):
 
