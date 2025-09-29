@@ -97,6 +97,10 @@ main {
     min-height: 60vh;
 }
 
+.clearFix {
+    clear: both;
+}
+
 /* Home Page Styles */
 #homemain {
     text-align: center;
