@@ -111,3 +111,15 @@ I put in place a thorough responsive design system with several breakpoints beca
 
  Technical changes
  The design of the CSS framework focused scalability and maintainability.  I developed base styles for small displays and improved them for larger viewports using a mobile-first approach.  The operation of the website was not affected because all of the current HTML IDs were kept and styled correctly.  The code follows to standard practices for CSS organization and contains thorough comments for future maintenance.
+
+
+# Screen shots:
+
+Desktop version
+ <img src="_images/_Desktopversion.png" alt="Desktop">
+
+ Tablet version
+ <img src="_images/_tablet.png" alt="Tablet">
+
+ Mobile version
+ <img src="_images/_mobliephone.png" alt="Mobile">
