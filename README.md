@@ -123,3 +123,20 @@ Desktop version
 
  Mobile version
  <img src="_images/_mobliephone.png" alt="Mobile">
+
+ # References
+
+Blueberrybeacon.com. (2025). Reservation Site. [online] Available at: https://blueberrybeacon.com/ [Accessed 26 Aug. 2025].
+
+Canva. (2025). Error. [online] Available at: https://www.canva.com/design/DAGxR7QTIMw/WtjFyM_X3qXYGSUxMBf7eA/edit [Accessed 27 Aug. 2025].
+
+Deepseek.com. (2025). DeepSeek. [online] Available at: https://chat.deepseek.com/a/chat/s/fb7f3a31-fb00-4fcc-bb05-2a1d38462664 [Accessed 26 Aug. 2025].
+
+Figma. (2025). Figma: the collaborative interface design tool. [Online]. Available at: https://www.figma.com (Accessed: 20 August 2025).
+
+Google. (2025). Google Maps Platform*. [Online]. Available at: https://mapsplatform.google.com/ (Accessed: 20 August 2025).
+
+The Independent Institute of Education (IIE) (2012) *Web Development (Introduction) WEDE5020/d/p/w: Module Manual/Guide 2025*. 1st edn. Johannesburg: The Independent Institute of Education (IIE).
+
+W3Schools. (2025). HTML, CSS, JavaScript Tutorials. [Online]. Available at: https://www.w3schools.com/ (Accessed:20 August 2025).
+
