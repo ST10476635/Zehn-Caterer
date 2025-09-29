@@ -20,9 +20,16 @@ header {
 }
 
 header img {
-    max-width: 150px;
-    height: auto;
+    width: 120px;
+    height: 120px; 
     margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures image fits nicely in circle */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 3px solid white;
 }
 
 /* Navigation Styles with Background Image */
@@ -411,25 +418,23 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     header img {
         max-width: 120px;
+        border-radius: 20px; /* Adjust for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        max-width: 100px;
+        border-radius: 15px; /* Adjust for small mobile */
     }
     
-    #homemain h1,
-    #aboutmain h1,
-    #servicemain h1,
-    #gallerymain h1 {
-        font-size: 1.3rem;
-    }
-    
-    #contactmain iframe,
-    #gallerymain iframe {
-        height: 250px;
-    }
-    
-    .submit-button {
-        width: 100%;
+    /* If using circular version on mobile */
+    header img.circular {
+        width: 100px;
+        height: 100px;
     }
 }
 
