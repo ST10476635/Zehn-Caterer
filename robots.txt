@@ -1,0 +1,10 @@
+# robots.txt for Zehn Catering
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl-delay: 10

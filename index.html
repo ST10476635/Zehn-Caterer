@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zehn Caterer | Home</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="description"
+        content="Zehn Catering offers premium catering services in Johannesburg. Specializing in corporate events, weddings, and private functions with authentic African cuisine and multicultural menus.">
+    <meta name="keywords"
+        content="catering Johannesburg, corporate catering, wedding catering, African cuisine, event catering, Zehn Caterers">
+    <meta name="author" content="Zehn Catering">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://yourdomain.com/index.html">
 
 </head>
 
@@ -54,16 +62,26 @@
                 Our kitchen is our creative studio, where classic techniques meet innovative flavors to create dishes
                 that are both familiar and excitingly new.</p>
             <!--Testimonial for business success-->
-            <h1><strong><u>Testimonial from clientele</u></strong></h1>
-            <p><i>"Zehn Caterers provided the most amazing food for our company year-end function. The guests would not
-                    stop talking about it! Professional from start to finish."</i> - <strong>Nomvula, Socafe</strong>
-            </p>
-            <p><i>"Our wedding day was perfect, and the food was the star of the show. Thank you for your flexibility
-                    and incredible flavours!"</i> - <strong>Thando & Sipho, Wedding</strong></p>
+            <h2>What Our Clients Say About Our Catering Services</h2>
+            <div class="testimonial">
+                <blockquote>
+                    "Zehn Caterers provided the most amazing food for our company year-end function. The guests would
+                    not stop talking about it! Professional from start to finish."
+                </blockquote>
+                <cite>- Nomvula, Socafe</cite>
+            </div>
+
+            <div class="testimonial">
+                <blockquote>
+                    "Our wedding day was perfect, and the food was the star of the show. Thank you for your flexibility
+                    and incredible flavours!"
+                </blockquote>
+                <cite>- Thando & Sipho, Wedding</cite>
+            </div>
         </main>
 
         <footer>
-            <nav id="bottomlinks">
+            <nav id="bottomlinks" aria-label="Footer Navigation">
                 <ul>
                     <li class="currentPage"><a href="index.html">Home</a></li>
                     <li class="currentPage"><a href="about.html">About</a></li>
@@ -73,16 +91,42 @@
                 </ul>
             </nav>
             <script>
-					var theDate=new Date()
-					document.write("&copy; " + theDate.getFullYear())
-					document.write(" - ZEHN CATERER | Last modified: ")
-					var theModifiedDate=new Date(document.lastModified)
-					document.write(theModifiedDate.toDateString())
-				</script>
-				<br>Powered by "THLALE - CORP" wrb hosting
+                var theDate = new Date()
+                document.write("&copy; " + theDate.getFullYear())
+                document.write(" - ZEHN CATERER | Last modified: ")
+                var theModifiedDate = new Date(document.lastModified)
+                document.write(theModifiedDate.toDateString())
+            </script>
+            <br>&copy; 2025 Zehn Catering. All rights reserved.
         </footer>
 
     </div>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Zehn Catering",
+  "description": "Premium catering services in Johannesburg specializing in corporate events, weddings, and private functions",
+  "url": "https://yourdomain.com",
+  "telephone": "+270896754312",
+  "email": "ZehnCaterers@co.za",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Beyers Naude Drive & Blueberry Street",
+    "addressLocality": "Roodepoort",
+    "postalCode": "2188",
+    "addressCountry": "ZA"
+  },
+  "openingHours": [
+    "Mo-Fr 10:00-21:00",
+    "Sa 10:00-23:00"
+  ],
+  "areaServed": "Johannesburg",
+  "servesCuisine": ["African", "Multicultural"],
+  "priceRange": "R150 - R750"
+}
+</script>
 
 </body>
 

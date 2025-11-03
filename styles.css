@@ -753,3 +753,56 @@ img {
         box-shadow: none;
     }
 }
+
+/* SEO Optimization Styles */
+.testimonial {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid #ffd700;
+    border-radius: 5px;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    margin: 0 0 1rem 0;
+    color: #555;
+}
+
+.testimonial cite {
+    font-weight: bold;
+    color: #2d1b69;
+    font-style: normal;
+}
+
+/* Schema markup styling */
+[itemscope] {
+    border: 1px solid transparent;
+}
+
+/* Improve loading performance */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* load resources that are needed */
+link[rel="preload"] {
+    display: none;
+}
+
+/* Structured data styling */
+.breadcrumb {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #2d1b69;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
