@@ -1,18 +1,17 @@
-// lightbox.js - Simple Lightbox Implementation
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxClose = document.querySelector('.lightbox-close');
     const lightboxPrev = document.querySelector('.lightbox-prev');
     const lightboxNext = document.querySelector('.lightbox-next');
-    
+
     let currentImageIndex = 0;
     let images = [];
 
     // Get all lightbox trigger images
     const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
-    
+
     // Initialize images array
     lightboxTriggers.forEach((trigger, index) => {
         images.push({
@@ -20,20 +19,20 @@ document.addEventListener('DOMContentLoaded', function() {
             alt: trigger.alt,
             caption: trigger.getAttribute('data-caption') || trigger.alt
         });
-        
+
         // Add click event to each image
-        trigger.addEventListener('click', function() {
+        trigger.addEventListener('click', function () {
             openLightbox(index);
         });
-        
+
         // Add keyboard accessibility
-        trigger.addEventListener('keypress', function(e) {
+        trigger.addEventListener('keypress', function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 openLightbox(index);
             }
         });
-        
+
         // Add tabindex for accessibility
         trigger.setAttribute('tabindex', '0');
         trigger.setAttribute('role', 'button');
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateLightbox();
         lightbox.style.display = 'block';
         document.body.style.overflow = 'hidden'; // Prevent scrolling
-        
+
         // Set focus for accessibility
         lightboxClose.focus();
     }
@@ -63,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lightboxImage.src = currentImage.src;
         lightboxImage.alt = currentImage.alt;
         lightboxCaption.textContent = currentImage.caption;
-        
+
         // Update ARIA labels for navigation
         lightboxPrev.setAttribute('aria-label', 'Previous image');
         lightboxNext.setAttribute('aria-label', 'Next image');
@@ -87,9 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
     lightboxNext.addEventListener('click', nextImage);
 
     // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (lightbox.style.display === 'block') {
-            switch(e.key) {
+            switch (e.key) {
                 case 'Escape':
                     closeLightbox();
                     break;
@@ -104,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close lightbox when clicking on backdrop
-    lightbox.addEventListener('click', function(e) {
+    lightbox.addEventListener('click', function (e) {
         if (e.target === lightbox) {
             closeLightbox();
         }
@@ -114,11 +113,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let touchStartX = 0;
     let touchEndX = 0;
 
-    lightbox.addEventListener('touchstart', function(e) {
+    lightbox.addEventListener('touchstart', function (e) {
         touchStartX = e.changedTouches[0].screenX;
     });
 
-    lightbox.addEventListener('touchend', function(e) {
+    lightbox.addEventListener('touchend', function (e) {
         touchEndX = e.changedTouches[0].screenX;
         handleSwipe();
     });
@@ -126,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleSwipe() {
         const swipeThreshold = 50;
         const diff = touchStartX - touchEndX;
-        
+
         if (Math.abs(diff) > swipeThreshold) {
             if (diff > 0) {
                 nextImage(); // Swipe left
