@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zehn Caterer | Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="" defer></script>
 
 </head>
 
@@ -30,19 +31,21 @@
         <main id="contactmain">
 
             <h1><u><strong>Find Us</strong></u></h1>
-            <img src="_images/_business_cards.jpg" alt="BusinesscardZehn">
+            <img src="_images/_business_cards.jpg" alt="Zehn Catering business cards">
             <!---Physical Location of business with embedded link-->
             <p><strong>Physical Address:</strong> Beyers Naude Drive & Blueberry Street Roodepoort 2188</p>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.591272311392!2d27.92435187621159!3d-26.07961097715355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95756c642bc3d9%3A0xd1d4c375bfeb0cc8!2sBlueberry%20Square!5e0!3m2!1sen!2snl!4v1756244490998!5m2!1sen!2snl"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Zehn Catering Location - Blueberry Square, Roodepoort"></iframe>
 
             <p><strong>Physical Address:</strong> Northgate</p>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14336.766079784786!2d27.93666720491411!3d-26.059996584647937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9575edd144810f%3A0xf20571b0af7a214!2sNorthgate%2C%20Randburg%2C%202162%2C%20South%20Africa!5e0!3m2!1sen!2snl!4v1756292635305!5m2!1sen!2snl"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Zehn Catering Location - Northgate, Randburg"></iframe>
 
             <p><strong>Email:</strong> ZehnCaterers@co.za</p>
             <p><strong>Contact Number:</strong> 089 675 4312</p>
@@ -58,28 +61,66 @@
             <!---A message form-->
             <div class="contact-form">
                 <h3>Send Us a Message</h3>
-                <form id="contactForm">
+                <form id="contactForm" action="https://formspree.io/f/your-form-i" method="POST">
                     <div class="form-group">
-                        <label for="contactName">Full Name:</label>
-                        <input type="text" id="contactName" name="contactName" required>
+                        <label for="contactName">Full Name: *</label>
+                        <input type="text" id="contactName" name="contactName" required minlength="2" maxlength="50"
+                            pattern="[A-Za-z\s]+" title="Please enter a valid name (letters and spaces only)">
+                        <span class="error-message" id="nameError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="contactEmail">Email Address:</label>
-                        <input type="email" id="contactEmail" name="contactEmail" required>
+                        <label for="contactEmail">Email Address: </label>
+                        <input type="email" id="contactEmail" name="contactEmail" required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+                        <span class="error-message" id="emailError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="contactSubject">Subject:</label>
-                        <input type="text" id="contactSubject" name="contactSubject" required>
+                        <label for="contactPhone">Phone Number: </label>
+                        <input type="tel" id="contactPhone" name="contactPhone" required pattern="[0-9+\-\s()]{10,15}"
+                            title="Please enter a valid phone number">
+                        <span class="error-message" id="phoneError"></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="contactMessage">Message:</label>
-                        <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                        <label for="messageType">Message Type: </label>
+                        <select id="messageType" name="messageType" required>
+                            <option value="">Select a message type</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="corporate">Corporate Catering</option>
+                            <option value="wedding">Wedding Catering</option>
+                            <option value="private">Private Event</option>
+                            <option value="quote">Request Quote</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message" id="typeError"></span>
                     </div>
 
-                    <button type="submit" class="submit-button">Send Message</button>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject: </label>
+                        <input type="text" id="contactSubject" name="contactSubject" required minlength="5"
+                            maxlength="100" title="Please enter a subject (5-100 characters)">
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Message: </label>
+                        <textarea id="contactMessage" name="contactMessage" rows="5" required minlength="10"
+                            maxlength="1000" title="Please enter a message (10-1000 characters)"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                            Subscribe to our newsletter for special offers and updates
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-button" id="submitButton">Send Message</button>
+                    <div id="formMessage" class="form-message"></div>
                 </form>
             </div>
 
