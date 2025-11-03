@@ -28,7 +28,6 @@ header img {
     margin-right: auto;
     border-radius: 50%;
     object-fit: cover;
-    /* Ensures image fits nicely in circle */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 3px solid white;
 }
@@ -45,7 +44,7 @@ header img {
     position: relative;
 }
 
-/* overlay for better text readability */
+/* overlay for text readability */
 #toplinks::before {
     content: '';
     position: absolute;
@@ -78,10 +77,36 @@ header img {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+#toplinks a:link {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+#toplinks a:visited {
+    color: #e6e6fa; /* Light purple for visited links */
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
 #toplinks a:hover {
+    color: #ffd700;
     background-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#toplinks a:active {
+    color: #ffed4e; 
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+    transition: all 0.1s ease;
+}
+
+#toplinks a:focus {
+    outline: 3px solid #ffd700;
+    outline-offset: 2px;
+    background-color: rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
 }
 
 #toplinks li:not(:has(a)) {
@@ -91,6 +116,7 @@ header img {
     position: relative;
     z-index: 2;
 }
+
 
 /* Main Content Styles */
 main {
