@@ -190,6 +190,7 @@ Zehn Catering was founded in 2020 and is managed by a passionate entrepreneur. S
 - `form-validation.js` - Contact form validation system
 - `robots.txt` - Search engine guidance
 - `sitemap.xml` - Site structure for search engines
+- `back-to-top.js` - Site button to go back to the top screen
 
 #### Changed Files:
 - `styles.css` - Complete redesign with SEO and lightbox features
