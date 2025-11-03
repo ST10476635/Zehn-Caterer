@@ -56,7 +56,7 @@ header img:hover {
     position: relative;
 }
 
-/* Overlay for better text readability */
+/* Overlay text readability */
 #toplinks::before {
     content: '';
     position: absolute;
@@ -177,6 +177,27 @@ main {
     font-size: 1.1rem;
 }
 
+/* SEO Optimization Styles */
+.testimonial {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid #ffd700;
+    border-radius: 5px;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    margin: 0 0 1rem 0;
+    color: #555;
+}
+
+.testimonial cite {
+    font-weight: bold;
+    color: #2d1b69;
+    font-style: normal;
+}
+
 /* About Page Styles */
 #aboutmain h1 {
     color: #2d1b69;
@@ -222,6 +243,19 @@ main {
 
 #aboutmain li {
     margin-bottom: 0.5rem;
+}
+
+.team-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.team-gallery img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Services Page Styles */
@@ -318,6 +352,77 @@ main {
 #gallerymain h3 {
     color: #6a3093;
     margin: 0.5rem 0 1.5rem 0;
+}
+
+/* Gallery SEO */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.gallery-item h3 {
+    color: #2d1b69;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.gallery-item p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.service-highlights {
+    background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.service-highlights h3 {
+    color: #2d1b69;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.service-highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-highlights li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-highlights li:before {
+    content: "✓";
+    color: #ffd700;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 /* Contact Page Styles */
@@ -449,7 +554,7 @@ main {
     background-color: #f2fdf2;
 }
 
-/* Error Message Styles */
+/* Error Message */
 .error-message {
     color: #e74c3c;
     font-size: 0.875rem;
@@ -660,6 +765,20 @@ footer {
     .location-section {
         padding: 1rem;
     }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .team-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-gallery img {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -713,6 +832,14 @@ footer {
     .location-section {
         padding: 0.5rem;
     }
+
+    .gallery-item {
+        padding: 0.5rem;
+    }
+
+    .service-highlights {
+        padding: 1rem;
+    }
 }
 
 /* Current Page Indicator */
@@ -735,46 +862,6 @@ img {
     color: #2d1b69;
 }
 
-/* Print Styles */
-@media print {
-    #toplinks,
-    #bottomlinks,
-    .contact-form,
-    .submit-button {
-        display: none;
-    }
-    
-    body {
-        background: white;
-        color: black;
-    }
-    
-    #wrapper {
-        box-shadow: none;
-    }
-}
-
-/* SEO Optimization Styles */
-.testimonial {
-    background: #f8f8f8;
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    border-left: 4px solid #ffd700;
-    border-radius: 5px;
-}
-
-.testimonial blockquote {
-    font-style: italic;
-    margin: 0 0 1rem 0;
-    color: #555;
-}
-
-.testimonial cite {
-    font-weight: bold;
-    color: #2d1b69;
-    font-style: normal;
-}
-
 /* Schema markup styling */
 [itemscope] {
     border: 1px solid transparent;
@@ -786,7 +873,7 @@ img {
     height: auto;
 }
 
-/* load resources that are needed */
+/* load resources needed */
 link[rel="preload"] {
     display: none;
 }
@@ -805,4 +892,27 @@ link[rel="preload"] {
 
 .breadcrumb a:hover {
     text-decoration: underline;
+}
+
+/* Print Styles */
+@media print {
+    #toplinks,
+    #bottomlinks,
+    .contact-form,
+    .submit-button {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    #wrapper {
+        box-shadow: none;
+    }
+    
+    .testimonial {
+        border-left: 2px solid #000;
+    }
 }
